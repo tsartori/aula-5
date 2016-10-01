@@ -1,0 +1,19 @@
+{
+    "name": "phpzm/aula-3",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William",
+            "email": "wilcorrea@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+        },
+        "files": [
+            "bootstrap.php"
+        ]
+    }
+}

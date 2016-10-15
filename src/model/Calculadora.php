@@ -5,6 +5,21 @@
  */
 class Calculadora {
 
+
+    public $dono;
+    private $atributos = [];
+
+    public function _construct($dono){
+      $this->dono = $dono;
+    }
+
+    public function __set($name, $value){
+      $this->atributos[$name]=$value;
+    }
+    public function __get($name){
+      return isset($this->atributos[$name]) ? $this->atributos[$name] : null; //? -> operador ternario / funciona como if, se tiver alguma coisa dentro de atributos ai retorna o valor, caso contrario retorna null
+    }
+
     /**
      * @param $valor1
      * @param $valor2

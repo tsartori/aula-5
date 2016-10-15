@@ -19,9 +19,26 @@ switch ($action) {
       $resultado =
       $calculadora->calcular($valor1[0],$valor2[0],$operador[0]);
 
+      $calculadora->cientifica = true;
+
+      echo "<h3>RESULTADO</h3>";
+      echo "<table border=1>" .
+              "<tr>" .
+                "<th>DONO</th>" .
+                "<th>MODO</th>" .
+                "<th>SAÍDA</th>" .
+              "<tr>" .
+              "<tr>" .
+                "<td>{$calculadora->dono}</td>" .
+                "<td>{$calculadora->modo}</td>" .
+                "<td>{$resultado}</td>" .
+              "<tr>" .
+            "</table>";
+      /*
       echo "o resultado é {$resultado}";
       echo '<br>';
       echo '<a href="file.php?action=novo"> De novo! </a>';
+      */
     }
     break;
 

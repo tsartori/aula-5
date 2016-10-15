@@ -3,6 +3,8 @@
 /**
  * class Calculadora
  */
+
+ namespace Fagoc;
 class Calculadora {
 
 

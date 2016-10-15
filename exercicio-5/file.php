@@ -15,11 +15,11 @@ switch ($action) {
 
     if($valor1 && $valor2 &&$operador){
       require __APP_ROOT__ . '/src/model/Calculadora.php';
-      $calculadora = new Calculadora();
+      $calculadora = new Calculadora("Ah veia");
       $resultado =
       $calculadora->calcular($valor1[0],$valor2[0],$operador[0]);
 
-      $calculadora->cientifica = true;
+      $calculadora->modo = "Científica";
 
       echo "<h3>RESULTADO</h3>";
       echo "<table border=1>" .
@@ -34,11 +34,11 @@ switch ($action) {
                 "<td>{$resultado}</td>" .
               "<tr>" .
             "</table>";
-      /*
-      echo "o resultado é {$resultado}";
+
+      //echo "o resultado é {$resultado}";
       echo '<br>';
       echo '<a href="file.php?action=novo"> De novo! </a>';
-      */
+
     }
     break;
 

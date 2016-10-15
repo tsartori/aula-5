@@ -3,7 +3,9 @@
 <p>Criar funções para realizar as operações matemáticas disponíveis</p>
 <?php
 //function
-require '../bootstrap.php';
+require '../vendor/autoload.php';
+
+use Fagoc\Calculadora;
 
 $action = get('action');
 
@@ -14,9 +16,9 @@ switch ($action) {
     $operador = post('operador');
 
     if($valor1 && $valor2 &&$operador){
-      require __APP_ROOT__ . '/src/model/Calculadora.php';
-      $calculadora = new Calculadora("Ah veia");
-      $resultado =
+      //require __APP_ROOT__ . '/src/model/Calculadora.php';
+      $calculadora = new Calculadora("Sartori");
+      $resultado = 0;
       $calculadora->calcular($valor1[0],$valor2[0],$operador[0]);
 
       $calculadora->modo = "Científica";

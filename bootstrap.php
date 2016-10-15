@@ -1,9 +1,20 @@
 <?php
 
-define('__APP_ROOT__', 'C:/xampp/htdocs/PHP/');
+//define uma constante com escopo global no projeto
+define('__APP_ROOT__','C:\xampp\htdocs\aula-5.git');
 
-function post($index){
+function get($index) {
+    $value = null;
+    if (isset($_GET[$index])){
+      $value = $_GET[$index];
+    }
+    return $value;
+}
 
-    return $_POST[$index];
-
+function post($index) {
+    $value = null;
+    if (isset($_POST[$index])){
+      $value = $_POST[$index];
+    }
+    return $value;
 }

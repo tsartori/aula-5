@@ -41,7 +41,14 @@ class Router
         if (!isset($this->routes[$method])) {
             $this->routes[$method] = [];
         }
-        $route = $arguments[0];
+        $peaces = explode('/', $arguments[0]);
+        foreach ($peaces as $key => $value) {
+            if (strpos($value, ':') === 0) {
+                $peaces[$key] = '(\w+)';
+            }
+        }
+        $pattern = str_replace('/', '\/', implode('/', $peaces));
+        $route = '/^' . $pattern . '$/';
         $callback = $arguments[1];
         $this->routes[$method][$route] = $callback;
     }
@@ -49,8 +56,10 @@ class Router
     {
         $routes = $this->routes[$this->method];
         foreach($routes as $route => $callback) {
-            if ($route === $this->uri) {
-                return call_user_func_array($callback, []);
+            if (preg_match($route, $this->uri, $params)) {
+                //$route === $this->uri
+                array_shift($params);
+                return call_user_func_array($callback, array_values($params));
             }
         }
     }

@@ -38,7 +38,7 @@ class Router
 
       $this->uri = $uri;
 
-      $this->method = isset($_SERVER[REQUEST_METHOD]) ? $_SERVER['REQUEST_METHOD'] : $this->method;
+      $this->method = isset($_SERVER['REQUEST_METHOD']) ? $_SERVER['REQUEST_METHOD'] : $this->method;
 
     }
 

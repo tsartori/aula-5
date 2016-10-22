@@ -41,6 +41,8 @@ require_once 'vendor/autoload.php';
           }
         });
 
+        $router->run();
+
         ?>
     </body>
 </html>

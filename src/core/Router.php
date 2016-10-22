@@ -42,6 +42,16 @@ class Router{
 
     }
 
+    public function run(){
+
+      $routes = this->routes[this->method];
+      foreach (routes as $route => $callback) {
+        if ($route == this->uri) {
+          return call_user_func_array($callback,[]);
+        }
+      }
+    }
+
 
   }
 

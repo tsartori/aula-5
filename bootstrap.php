@@ -1,7 +1,7 @@
 <?php
 
 //define uma constante com escopo global no projeto
-define('__APP_ROOT__','C:\xampp\htdocs\aula-5.git');
+//define('__APP_ROOT__','C:\xampp\htdocs\aula-5.git');
 
 function get($index) {
     $value = null;

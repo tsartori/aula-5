@@ -20,16 +20,18 @@ require_once 'vendor/autoload.php';
                 </div>
 
                 <div class="nav-right nav-menu">
-                    <a class="nav-item" href="./e=6">Exercio 6</a>
-                    <a class="nav-item" href="./e=7">Exercio 7</a>
-                    <a class="nav-item" href="./e=8">Exercio 8</a>
+                    <a class="nav-item" href="./e=6">Exercicio 6</a>
+                    <a class="nav-item" href="./e=7">Exercicio 7</a>
+                    <a class="nav-item" href="./e=8">Exercicio 8</a>
                 </div>
             </div>
         </nav>
         <pre>
         <?php
         use Fagoc\Core\Router;
-        $router = new Router('/exercicio-6/', 'GET');
+
+        //$router = new Router('/exercicio-6/', 'GET');
+        $router = new Router();
         $router->get('/exercicio-6/', function() {
             $exercicio = __DIR__ . '/exercicio-6/' . 'file.php';
             if (file_exists($exercicio)) {

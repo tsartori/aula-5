@@ -2,7 +2,7 @@
 namespace Fagoc\Core;
 class Router
 {
-    private $method = 'get';
+    private $method = 'GET';
     private $uri = '';
     /**
     * routes[
@@ -21,7 +21,27 @@ class Router
         if (!is_null($method)) {
             $this->method = $method;
         }
+        $this->parseRequest();
     }
+
+    private function parseRequest(){
+      //var_dump($_SERVER);
+      $self = isset($_SERVER['PHP_SELF']) ? $_SERVER['PHP_SELF'] : '';
+      $peaces = explode('/', $self);
+      //var_dump($peaces);
+      array_pop($peaces);//retira o ultimo item do array
+
+      $start = implode('/', $peaces);
+      $request_uri = isset($_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : '';
+
+      $uri = preg_replace('/' . preg_quote($start, '/') . '/', '', $request_uri, 1);
+
+      $this->uri = $uri;
+
+      $this->method = isset($_SERVER[REQUEST_METHOD]) ? $_SERVER['REQUEST_METHOD'] : $this->method;
+
+    }
+
     public function __call($name, $arguments)
     {
         $method = strtoupper($name);

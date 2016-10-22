@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Fagoc\\Core\\' => array($baseDir . '/src/core'),
     'Fagoc\\' => array($baseDir . '/src/model'),
 );

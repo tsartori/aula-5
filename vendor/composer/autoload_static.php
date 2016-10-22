@@ -13,11 +13,16 @@ class ComposerStaticInit30a0959324098b63e72ba1a5a8b5c76f
     public static $prefixLengthsPsr4 = array (
         'F' => 
         array (
+            'Fagoc\\Core\\' => 11,
             'Fagoc\\' => 6,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Fagoc\\Core\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core',
+        ),
         'Fagoc\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/model',

@@ -20,6 +20,9 @@ require_once 'vendor/autoload.php';
                         <img src="http://fagoc.br/download/a/logo" alt="logo" />
                     </a>
                 </div>
+
+                
+
                 <div class="nav-right nav-menu">
                     <a class="nav-item" href="index.php?e=6">exercicio 6</a>
                     <a class="nav-item" href="index.php?e=7">exercicio 7</a>

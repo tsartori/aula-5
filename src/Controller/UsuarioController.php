@@ -3,10 +3,19 @@
 namespace Fagoc\Controller;
 
 use Fagoc\Core\Input;
+use Fagoc\Usuario;
 
 class UsuarioController{
   public function salvar(Input $input){
-    //var_dump($input);
+    $model = new Usuario();
+
+    $model->create([
+      'nome' => $input->post('nome'),
+      'email' => $input->post('email'),
+      'data_nascimento' => $input->post('data_nascimento'),
+      'observacao' => $input->post('observacao'),
+      'question' => $input->post('question'),
+    ]);
     ?>
     <div class="section">
       <div>
@@ -19,6 +28,6 @@ class UsuarioController{
       </div>
     </div>
     <?php
-    
+
   }
 }

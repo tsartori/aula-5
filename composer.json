@@ -12,7 +12,8 @@
     "autoload": {
         "psr-4": {
           "Fagoc\\":"src/model",
-          "Fagoc\\Core\\":"src/core"
+          "Fagoc\\Core\\":"src/core",
+          "Fagoc\\Controller\\":"src/Controller"
         },
         "files": [
             "bootstrap.php"

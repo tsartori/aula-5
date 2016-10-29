@@ -4,14 +4,7 @@ class Router
 {
     private $method = 'GET';
     private $uri = '';
-    /**
-    * routes[
-    *  'GET' => [
-    *    '/' => 'faço isso',
-    *    '/exercicio/6' => 'carregar o arquivo do exercicio 6'
-    *    ]
-    * ]
-    */
+    
     private $routes = [];
     public function __construct($uri = null, $method = null)
     {

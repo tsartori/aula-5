@@ -14,6 +14,7 @@ class ComposerStaticInit30a0959324098b63e72ba1a5a8b5c76f
         'F' => 
         array (
             'Fagoc\\Core\\' => 11,
+            'Fagoc\\Controller\\' => 17,
             'Fagoc\\' => 6,
         ),
     );
@@ -22,6 +23,10 @@ class ComposerStaticInit30a0959324098b63e72ba1a5a8b5c76f
         'Fagoc\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/core',
+        ),
+        'Fagoc\\Controller\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Controller',
         ),
         'Fagoc\\' => 
         array (
